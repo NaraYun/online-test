@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>신나는 야구게임</h2>
+    <button onclick = "runBaseball()"> go </button>
+    <p id = "output"></p>
+    <script>
+    
+    //alert("경기가 시작되었습니다.");
+
+    var recordScoreS =[];
+    var recordScoreB =[];
+    var recordScoreO =[];
+
+    1 //스트라이크(S)
+    2//볼(B)
+    3 //아웃(O)
+    var strs = "스트라이크";
+    var s = "s";
+    var strb = "볼";
+    var b = "b";
+    var stro = "아웃";
+    var o = "o";
+    //var sums = 0;
+    //var sumb = 0;
+    //var sumc = 0;
+
+    
+    function runBaseball () {
+        var random = Math.floor((Math.random()*3) + 1);
+        document.getElementById("output").innerHTML = random;
+        if ( random === 1 ) {
+            console.log (strs);
+            console.log (s);
+            recordScoreS.push(s);
+            console.log (recordScoreS.length + s, recordScoreB.length + b, recordScoreO.length + o);
+            if (recordScoreS.length = 3) {
+                recordScoreO.push(o);
+            }
+        } else if (random === 2) {
+            console.log (strb);
+            console.log (b);
+            recordScoreB.push(b);
+            console.log (recordScoreB.length + b);
+          } else { console.log (stro);
+                   console.log (o);
+                   recordScoreO.push(o);
+                   console.log (recordScoreO.length + o);
+          }
+    };
+    runBaseball();
+    </script>
+
+
+   
+</body>
+</html>
